@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Student Details </title>
+<style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  position: relative;
+  height:auto;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.image {
+  display: block;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.column:hover .photo{
+     height:100%;
+}
+h1{
+  color:red;
+  text-align:center;
+}
+body{
+  background:lightgreen;
+}
+.photo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+ span{
+     display:flex;
+     justify-content:center;
+}
+  span a{
+   justify-content:center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a:hover { color: red; background-color: black; }
+.arrow{
+       float: left;
+	   max-height:34px;
+	   max-width:34px;
+	}
+
+
+</style>
+</head>
+<body>
+<span>
+<img src="images/banner.jpg" alt="football background" width="1900" height="300">
+</span>
+<span>
+<a href="https://w1836717.users.ecs.westminster.ac.uk/Webdesign/WebDesignandDevolpmentcoursework/buyproductspage1.html" class="button">Buy Products</a>
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/Student3.html" class="button">Quiz</a>
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/Student3_2.html" class="button">Student Details</a>
+<a href="https://w1822557.users.ecs.westminster.ac.uk/Webdevelop/Student2QueryFormNew.html" class="button">Query</a>
+</span>
+<h1> About our roles </h1>
+<div class="row">
+  <div class="column">
+    <img src="images/Saad.jpg" alt="Saad" style="width:100%" class="image">
+	<div class="photo">
+	<div class="text">Muhammad Saad Faisal,Student 1 </div>
+	</div>
+  </div>
+  <div class="column">
+    <img src="images/hasan.jpg" alt="Hasan" style="width:100%" class="image">
+        <div class="photo">
+	<div class="text">Hasan Chaudhry,Student 2 </div>
+       </div>
+  </div>
+  <div class="column">
+    <img src="images/Fareed.jpg" alt="Fareed" style="width:100%" class="image">
+        <div class="photo">
+	<div class="text">Fareed Khan,Student 3 </div>
+      </div>
+  </div>
+</div>
+ <a href = "#top"> <img src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/to-up-512.png" alt = "top arrow" class="arrow"> Back To The Top </a><br><br><br> 
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/pageEditor.html" class="page editor">Page Editor</a>
+</body>
+</html>
