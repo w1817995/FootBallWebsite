@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <style>
+  body{
+      background-color:lightgreen; 
+  }
+  h1{
+    color: red;
+	text-align:center;
+  }
+  .questions{
+   display:none;
+  }
+  span{
+     display:flex;
+     justify-content:center;
+}
+  span a{
+   justify-content:center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a:hover { color: red; background-color: black; }
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color:black;
+}
+
+th, td {
+  padding: 15px;
+}
+h2{
+ color:red;
+ text-align:center;
+}
+
+  </style>
+  </head>
+<body>
+<span>
+<img src="images/banner.jpg" alt="football background" width="1900" height="300">
+</span>
+<span>
+<a href="https://w1836717.users.ecs.westminster.ac.uk/Webdesign/WebDesignandDevolpmentcoursework/buyproductspage1.html" class="button">Buy Products</a>
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/Student3.html" class="button">Quiz</a>
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/Student3_2.html" class="button">Student Details</a>
+<a href="https://w1822557.users.ecs.westminster.ac.uk/Webdevelop/Student2QueryFormNew.html" class="button">Query</a>
+</span>
+<h1> Quiz</h1>
+
+<form>
+  <!-- Info Box -->
+  <div class ="info-box">
+    <div class = "info-title">Some rules of this Quiz:</div>
+    <div class = "info-list">
+      <div class ="info">1. You will only have <strong>1 minute</strong> to complete the Quiz.</div>
+      <div class ="info">2. It's a multiple-choice quiz and you can select only one answer for each question.</div>
+      <div class ="info">3. It contains <strong>10 questions</strong> and each question contains 2 marks.</div>
+      <div class ="info">4. Once timer is out, you can view the answers and the scores.</div>
+    </div>
+  </div>
+  <!-- start quiz button -->
+  <button type="button" onclick="startQuiz()">Start Quiz</button><br>
+  <div class="questions" id="questions1">
+  Time Left:<div id="timer"></div><br>
+  <div id="Q1">Question 1: Which football brand did the NFL team used in the premier league?</div><br>
+  <input type="radio" name="Q1" id="choice-11" value="nike"><label for="choice-11">Nike</label><br>
+  <input type="radio" name="Q1" id="choice-12" value="adidas"><label for="choice-12">Adidas</label><br>
+  <input type="radio" name="Q1" id="choice-13" value="puma"><label for="choice-13">Puma</label><br>  
+  <br>
+  <div id="Q2">Question 2: Is Mohamed Salah the top goal scorer? </div><br>
+  <input type="radio" name="Q2" id="choice-21" value="yes"><label for="choice-21">Yes</label><br>
+  <input type="radio" name="Q2" id="choice-22" value="no"><label for="choice-22">No</label><br> 
+  <br>  
+  <div id="Q3">Question 3: How many wins did Derby County record in the 2007/08 season?</div><br>
+  <input type="radio" name="Q3" id="choice-31" value="one"><label for="choice-31">One</label><br>
+  <input type="radio" name="Q3" id="choice-32" value="two"><label for="choice-32">Two</label><br> 
+  <input type="radio" name="Q3" id="choice-33" value="three"><label for="choice-33">Three</label><br> 
+  <br> 
+  <div id="Q4">Question 4: Which team has the most leading points in the premier league leader-board? </div><br>
+  <input type="radio" name="Q4" id="choice-41" value="man_city"><label for="choice-41">Manchester City</label><br>
+  <input type="radio" name="Q4" id="choice-42" value="Chelsea"><label for="choice-42">Chelsea F.C.</label><br>
+  <input type="radio" name="Q4" id="choice-43" value="Arsenal"><label for="choice-43">Arsenal F.C.</label><br>
+  <input type="radio" name="Q4" id="choice-44" value="Liverpool"><label for="choice-44">Liverpool F.C.</label><br>
+  <input type="radio" name="Q4" id="choice-45" value="None"><label for="choice-45">None of the above</label><br>
+  <br>
+  <div id="Q5">Question 5: Who is currently top of the league?</div><br>
+  <input type="radio" name="Q5" id="choice-51" value="robert"><label for="choice-51"> Robert Lewandowski </label><br>
+  <input type="radio" name="Q5" id="choice-52" value="karim"><label for="choice-52"> Karim Benzema </label><br>
+  <input type="radio" name="Q5" id="choice-53" value="dusan"><label for="choice-53"> Dusan Vlahovic </label><br>
+  <br>
+  <div id="Q6">Question 6: Which team went an entire season without losing a game in 2003/04?</div><br>
+  <input type="radio" name="Q6" id="choice-61" value="tottenham"><label for="choice-61">Tottenham Hotspur F.C.</label><br>
+  <input type="radio" name="Q6" id="choice-62" value="arsenal"><label for="choice-62">Arsenal F.C.</label><br>
+  <input type="radio" name="Q6" id="choice-63" value="manchester"><label for="choice-63">Manchester City</label><br>
+  <br>
+  <div id="Q7">Question 7: Which Premier League club did football icon Cristiano Ronaldo play for?</div><br>
+  <input type="radio" name="Q7" id="choice-71" value="manchester"><label for="choice-71">Manchester United</label><br>
+  <input type="radio" name="Q7" id="choice-72" value="liverpool"><label for="choice-72">Liverpool F.C.</label><br>
+  <input type="radio" name="Q7" id="choice-73" value="chelsea"><label for="choice-73">Chelsea F.C.</label><br>
+  <br>
+  <div id="Q8">Question 8: Which of following team do not play in stripes?</div><br>
+  <input type="radio" name="Q8" id="choice-81" value="newcastle"><label for="choice-81">Newcastle</label><br>
+  <input type="radio" name="Q8" id="choice-82" value="southampton"><label for="choice-82">Southampton</label><br>
+  <input type="radio" name="Q8" id="choice-83" value="tottenham"><label for="choice-83">Tottenham Hotspur</label><br>
+  <input type="radio" name="Q8" id="choice-84" value="lincoln"><label for="choice-84">Lincoln City</label><br>
+  <br>
+  <div id="Q9">Question 9: When was first official international football match was played?</div><br>
+  <input type="radio" name="Q9" id="choice-91" value="1929"><label for="choice-91">1929</label><br>
+  <input type="radio" name="Q9" id="choice-92" value="1872"><label for="choice-92">1872</label><br>
+  <input type="radio" name="Q9" id="choice-93" value="1902"><label for="choice-93">1902</label><br>
+  <input type="radio" name="Q9" id="choice-94" value="1870"><label for="choice-94">1870</label><br>
+  <br>
+  <div id="Q10">Question 10: Who among the following achieved the first World Cup hat-trick?</div><br>
+  <input type="radio" name="Q10" id="choice-101" value="johino"><label for="choice-101">Johino</label><br>
+  <input type="radio" name="Q10" id="choice-102" value="bert"><label for="choice-102">Bert Patenaude</label><br>
+  <input type="radio" name="Q10" id="choice-103" value="lucien"><label for="choice-103">Lucien Laurent</label><br>
+  <input type="radio" name="Q10" id="choice-104" value="pele"><label for="choice-104">Pele</label><br>
+  <br>
+   <button type="button" id="submit">Submit Answers</button>
+   <button type="button" id="reset">Restart Quiz</button>
+   <br>
+   Total Score:<div id="score"></div><br>
+   Time taken:<div id="time_taken"></div>
+  <br>
+</div>
+<a href="https://w1817995.users.ecs.westminster.ac.uk/Webdev/Web%20design%20group%20coursework/pageEditor.html" class="page editor">Page Editor</a>
+ </form> 
+ <script>
+ document.getElementById("reset").addEventListener("click",function(){
+    location.reload();
+ })
+ function startQuiz(){
+   document.getElementById("questions1").classList.remove("questions");
+ }
+   function getRadioValue( radioArray ) {
+   var i;
+   for ( i = 0; i < radioArray.length; i++ ) {
+      if ( radioArray[ i ].checked ) { 
+         return radioArray[ i ].value;
+      }
+   }
+   return "";
+}
+<!-- https://stackoverflow.com/questions/55150449/javascript-quiz-timer -->  
+var total_seconds = 60 * 1;
+var c_minutes = parseInt(total_seconds / 60);
+var c_seconds = parseInt(total_seconds % 60);
+var timer;
+
+function CheckTime() {
+  document.getElementById("timer").innerHTML = c_minutes + ' minutes ' + c_seconds + ' seconds ';
+
+  if (total_seconds <= 0) {
+    checkAnswers();
+  } else {
+    total_seconds = total_seconds - 1;
+    c_minutes = parseInt(total_seconds / 60);
+    c_seconds = parseInt(total_seconds % 60);
+    timer = setTimeout(CheckTime, 1000);
+  }
+}
+
+timer = setTimeout(CheckTime, 1000);
+
+document.getElementById("submit").addEventListener("click",checkAnswers);
+   	 
+function checkAnswers(){	
+     clearTimeout(timer); 
+	 var score = 0;
+     var userAnswer1 = getRadioValue(document.getElementsByName("Q1"));
+     var userAnswer2 = getRadioValue(document.getElementsByName("Q2"));	 
+     var userAnswer3 = getRadioValue(document.getElementsByName("Q3"));
+	 var userAnswer4 = getRadioValue(document.getElementsByName("Q4"));
+	 var userAnswer5 = getRadioValue(document.getElementsByName("Q5"));
+	 var userAnswer6 = getRadioValue(document.getElementsByName("Q6"));
+	 var userAnswer7 = getRadioValue(document.getElementsByName("Q7"));
+	 var userAnswer8 = getRadioValue(document.getElementsByName("Q8"));
+	 var userAnswer9 = getRadioValue(document.getElementsByName("Q9"));
+	 var userAnswer10 = getRadioValue(document.getElementsByName("Q10"));
+	 var CorrectAnswers = ['nike','yes','one','man_city','robert','arsenal','manchester','southampton','1872','bert'];
+	 if(userAnswer1 == CorrectAnswers[0]){
+	     document.getElementById("Q1").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q1").style.backgroundColor = "red";
+	   }
+	 if(userAnswer2 == CorrectAnswers[1]){
+	     document.getElementById("Q2").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q2").style.backgroundColor = "red";
+	   }
+	 if(userAnswer3 == CorrectAnswers[2]){
+	     document.getElementById("Q3").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q3").style.backgroundColor = "red";
+	   }
+	 
+	 if(userAnswer4 == CorrectAnswers[3]){
+	     document.getElementById("Q4").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q4").style.backgroundColor = "red";
+	   }
+	    if(userAnswer5 == CorrectAnswers[4]){
+	     document.getElementById("Q5").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q5").style.backgroundColor = "red";
+	   }
+	    if(userAnswer6 == CorrectAnswers[5]){
+	     document.getElementById("Q6").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q6").style.backgroundColor = "red";
+	   }
+	    if(userAnswer7 == CorrectAnswers[6]){
+	     document.getElementById("Q7").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q7").style.backgroundColor = "red";
+	   }
+	   if(userAnswer8 == CorrectAnswers[7]){
+	     document.getElementById("Q8").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q8").style.backgroundColor = "red";
+	   }
+	   if(userAnswer9 == CorrectAnswers[8]){
+	     document.getElementById("Q9").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q9").style.backgroundColor = "red";
+	   }
+	   if(userAnswer10 == CorrectAnswers[9]){
+	     document.getElementById("Q10").style.backgroundColor = "blue";
+		 score += 2;
+		 }
+		 else{
+		  document.getElementById("Q10").style.backgroundColor = "red";
+	   }
+	   document.getElementById("score").innerHTML = " " + score;
+	   document.getElementById("time_taken").innerHTML = " " + (59 - Math.floor(total_seconds)) + " " + "seconds";
+
+	  }
+	  
+ </script>
+</body>
+</html>
